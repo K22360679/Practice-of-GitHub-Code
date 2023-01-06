@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <header>
         <title>PythonからJavascriptに変数を渡すテスト</title>
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
@@ -8,7 +8,11 @@
     <body>
         <script>
             function draw(list){
-                document.write(list+"<br>")
+                document.write("toStringなし:"+list+" typeof:"+typeof list+" isArray:"+Array.isArray(list)+"<br>")
+                document.write("toStringあり:"+list.toString()+" typeof:"+typeof list.toString()+" isArray:"+Array.isArray(list.toString())+"<br>")
+                document.write("toString+配列化:"+list.toString().split(",")+" typeof:"+typeof list.toString().split(",")+" isArray:"+Array.isArray(list.toString().split(","))+"<br>")
+                document.write("<p><a href=\"index.html\">戻る</a></p>")
+                document.title="PythonからJavascriptに変数を渡すテスト"
             }
         </script>
         <py-script>
